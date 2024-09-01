@@ -28,16 +28,24 @@ class _DrawerNavigationState extends State<DrawerNavigation> {
               title:const Text(
                 'Home',
               ),
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) =>const HomeScreen())),
+              onTap: ()
+              {
+                Navigator.pop(context);
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const HomeScreen()));
+              },
             ),
             ListTile(
               leading:const Icon(Icons.view_list),
               title:const Text(
                 'Categories',
               ),
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) =>const CategoriesScreen())),
+              onTap: ()
+              {
+                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const CategoriesScreen()));
+              },
             )
           ],
         ),

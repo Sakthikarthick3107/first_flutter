@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_sqlite/helpers/drawer_navigation.dart';
+import 'package:todo_sqlite/screens/new_todo.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -25,6 +26,16 @@ class _HomeScreenState extends State<HomeScreen> {
               fontWeight: FontWeight.bold
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => NewTodo()));
+        },
+        shape: const CircleBorder(),
+        backgroundColor: Colors.lightBlueAccent,
+        foregroundColor: Colors.white,
+        elevation: 20,
+        child: const Icon(Icons.add),
       ),
     );
   }

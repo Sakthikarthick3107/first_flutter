@@ -9,7 +9,7 @@ class DatabaseConnection{
     try {
       if(_database != null) return _database!;
       var directory = await getApplicationDocumentsDirectory();
-      var path = join(directory.path , 'build_todo.db');
+      var path = join(directory.path , 'build_todo_2.db');
       _database  = await openDatabase(path , version: 1 , onCreate: _onCreatingDatabase);
       return _database!;
     }
